@@ -42,11 +42,9 @@ export default class HolbertonCourse {
     if (!Array.isArray(arr)) {
       throw new TypeError('Students must be an array');
     }
-    // eslint-disable-next-line no-plusplus
-    for (let i = 0; i < arr.length; i++) {
-      if (typeof arr[i] !== 'string') {
-        throw new TypeError('Students must be an array of strings');
-      }
+
+    if (!arr.every((student) => typeof student === 'string')) {
+      throw new TypeError('Students must be an array of strings');
     }
     this._students = arr;
   }

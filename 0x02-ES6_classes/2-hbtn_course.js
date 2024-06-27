@@ -26,7 +26,7 @@ export default class HolbertonCourse {
 
   // Sets the length of the course in months.
   set length(length) {
-    if (typeof val !== 'number') {
+    if (typeof length !== 'number') {
       throw new TypeError('Length must be a number');
     }
     this._length = length;

@@ -6,12 +6,12 @@ export default class Pricing {
     this.currency = currency;
   }
 
-  //Returns the amount
+  // Returns the amount
   get amount() {
     return this._amount;
   }
 
-  //Sets the amount
+  // Sets the amount
   set amount(value) {
     if (typeof value !== 'number') {
       throw new TypeError('amount must be a number');
@@ -19,12 +19,12 @@ export default class Pricing {
     this._amount = value;
   }
 
-  //Returns the currency
+  // Returns the currency
   get currency() {
     return this._currency;
   }
 
-  //Sets the currency
+  // Sets the currency
   set currency(value) {
     if (!(value instanceof Currency)) {
       throw new TypeError('currency must be a Currency');
@@ -32,12 +32,12 @@ export default class Pricing {
     this._currency = value;
   }
 
-  //Returns the full prices in the format 'amountt name currency code'.
+  // Returns the full prices in the format 'amountt name currency code'.
   displayFullPrice() {
     return `${this.amount} ${this.currency.name} (${this.currency.code})`;
   }
 
-  //Returns the converted amount based on the currency rate.
+  // Returns the converted amount based on the currency rate.
   static convertPrice(amount, conversionRate) {
     if (typeof amount !== 'number') {
       throw new TypeError('amount must be a number');

@@ -7,12 +7,12 @@ export default class Building {
     this.evacuationWarningMessage();
   }
 
-  //Returns the size of the building in square feet.
+  // Returns the size of the building in square feet.
   get sqft() {
     return this._sqft;
   }
 
-  //Sets the size of the building in square feet
+  // Sets the size of the building in square feet
   set sqft(value) {
     this._sqft = value;
   }

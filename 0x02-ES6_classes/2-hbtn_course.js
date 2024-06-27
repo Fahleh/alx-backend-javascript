@@ -1,4 +1,4 @@
-//A class reporesenting a course.
+// A class reporesenting a course.
 export default class HolbertonCourse {
   constructor(name, length, students) {
     this.name = name;
@@ -6,12 +6,12 @@ export default class HolbertonCourse {
     this.students = students;
   }
 
-  //Returns the name of the course.
+  // Returns the name of the course.
   get name() {
     return this._name;
   }
 
-  //Sets the name of the course.
+  // Sets the name of the course.
   set name(name) {
     if (typeof name !== 'string') {
       throw new TypeError('Name must be a string');
@@ -19,12 +19,12 @@ export default class HolbertonCourse {
     this._name = name;
   }
 
-  //Returns the length of the course in months.
+  // Returns the length of the course in months.
   get length() {
     return this._length;
   }
 
-  //Sets the length of the course in months.
+  // Sets the length of the course in months.
   set length(length) {
     if (typeof val !== 'number') {
       throw new TypeError('Length must be a number');
@@ -32,12 +32,12 @@ export default class HolbertonCourse {
     this._length = length;
   }
 
-  //Returns the list of students in the course.
+  // Returns the list of students in the course.
   get students() {
     return this._students;
   }
 
-  //Sets the list of students in the course.
+  // Sets the list of students in the course.
   set students(arr) {
     if (!Array.isArray(arr)) {
       throw new TypeError('Students must be an array');

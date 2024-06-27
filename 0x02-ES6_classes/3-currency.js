@@ -4,22 +4,22 @@ export default class Currency {
     this.name = name;
   }
 
-  //Returns the currency code
+  // Returns the currency code
   get code() {
     return this._code;
   }
 
-  //Sets tthe currency code
+  // Sets tthe currency code
   set code(value) {
     this._code = value;
   }
 
-  //Returns the name of the currency.
+  // Returns the name of the currency.
   get name() {
     return this._name;
   }
 
-  //Sets the name of the currency.
+  // Sets the name of the currency.
   set name(value) {
     this._name = value;
   }

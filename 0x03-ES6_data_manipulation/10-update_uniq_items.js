@@ -1,6 +1,6 @@
 // Returns an updated map for all items with initial quantity at 1.
 export default function updateUniqueItems(map) {
-  if (!(map instanceof Map)) throw new Error('Argument must be a Map');
+  if (!(map instanceof Map)) throw new Error('Cannot process');
 
   map.forEach((value, key) => {
     if (value === 1) {

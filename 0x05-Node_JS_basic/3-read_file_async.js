@@ -1,22 +1,22 @@
-const fs = require("fs");
+const fs = require('fs');
 
 const countStudents = (path) => {
   const promise = new Promise((resolve, reject) => {
-    fs.readFile(path, "utf-8", (error, results) => {
+    fs.readFile(path, 'utf-8', (error, results) => {
       if (error) {
-        reject(Error("Cannot load the database"));
+        reject(Error('Cannot load the database'));
       } else {
-        const lines = results.split("\n");
+        const lines = results.split('\n');
         let i = 0;
         let countStudents = 0;
-        let meessage = "";
+        let meessage = '';
         const fieldObj = {};
 
         const parseLines = () => {
           for (const line of lines) {
-            if (line.trim() !== "" && i > 0) {
+            if (line.trim() !== '' && i > 0) {
               countStudents += 1;
-              const [firstName, LastName, age, field] = line.split(","); // eslint-disable-line
+              const [firstName, LastName, age, field] = line.split(','); // eslint-disable-line
               if (!fieldObj[field]) {
                 fieldObj[field] = {
                   count: 1,
@@ -41,7 +41,7 @@ const countStudents = (path) => {
           meessage += `Number of students: ${countStudents}\n`;
           for (const field of Object.keys(fieldObj)) {
             const n = fieldObj[field].count;
-            const names = fieldObj[field].students.join(", ");
+            const names = fieldObj[field].students.join(', ');
             console.log(`Number of students in ${field}: ${n}. List: ${names}`);
             meessage += `Number of students in ${field}: ${n}. List: ${names}\n`;
           }

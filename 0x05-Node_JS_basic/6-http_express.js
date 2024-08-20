@@ -12,4 +12,4 @@ app.listen(PORT, () => {
   console.log(`Server listening at http://${host}:${PORT}`);
 });
 
-module.exPORTs = app;
+module.exports = app;

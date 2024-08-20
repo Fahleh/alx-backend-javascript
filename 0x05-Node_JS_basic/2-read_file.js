@@ -34,7 +34,7 @@ function countStudents(path) {
       const len = fieldsObj[field].count;
       const studentNames = fieldsObj[field].students.join(', ');
       console.log(
-        `Number of students in ${field}: ${len}. List: ${studentNames}`
+        `Number of students in ${field}: ${len}. List: ${studentNames}`,
       );
     }
   } catch (error) {

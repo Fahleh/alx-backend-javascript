@@ -41,7 +41,7 @@ function countStudents(path) {
       }
 
       const total = Object.values(groups).reduce(
-        (pre, cur) => (pre || []).length + cur.length
+        (pre, cur) => (pre || []).length + cur.length,
       );
       reports.push(`Number of students: ${total}`);
       for (const [field, group] of Object.entries(groups)) {
@@ -50,7 +50,7 @@ function countStudents(path) {
             `Number of students in ${field}: ${group.length}.`,
             'List:',
             group.map((student) => student.firstname).join(', '),
-          ].join(' ')
+          ].join(' '),
         );
       }
       resolve(reports.join('\n'));
